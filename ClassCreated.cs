@@ -5,7 +5,9 @@ public class GetName
 
 class program
 {
-    static void Main()
+    static void Main() //Program does not contain a static 'Main' method suitable for an entry point   
+
+        // in Main method Allwas Capotal
     {
         GetName gn = new GetName();
         
