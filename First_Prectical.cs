@@ -1,10 +1,3 @@
-using system;
+Console.WriteLine("Hello!")
 
-class program
-{ 
-    public static void main()
-    {
-        Console.WriteLine("Hello!")
-    }
-}
 
