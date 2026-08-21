@@ -1,0 +1,61 @@
+// operators..
+
+// Arithmatic Operators
+
+int a = 10;
+int b = 5;
+Console.WriteLine("-------------------------Arithmatic Operators------------------------------");
+Console.WriteLine(a+b);
+Console.WriteLine(a-b);
+Console.WriteLine(a*b);
+Console.WriteLine(a/b);
+Console.WriteLine(a%b);
+
+// Conditional operators
+
+int c=10;
+Console.WriteLine("-------------------Conditional operators---------------------------------");
+Console.WriteLine(a==c);
+Console.WriteLine(a!=b);
+Console.WriteLine(a>b);
+Console.WriteLine(a<b);
+Console.WriteLine(a>=b);
+Console.WriteLine(a<=b);
+
+// Logical Operator
+Console.WriteLine("------------------------Logical Operators-----------------------------------");
+Console.WriteLine(a >b && a<c);
+Console.WriteLine(a >c || a > b);
+
+Console.WriteLine(!(a>15));
+
+bool isActive = false;
+Console.WriteLine(!isActive);
+
+Console.WriteLine("--------------------------Assigment Operators----------------------------");
+
+Console.WriteLine(a-=c);
+Console.WriteLine(a*=10);
+Console.WriteLine(a+=20);
+Console.WriteLine(a/=b);
+Console.WriteLine(a=b);
+
+Console.WriteLine("-----------------------------Ternary Operators-----------------------------");
+Console.WriteLine(a%2==0 ? "Is Even" : "Is Odd");
+
+Console.WriteLine("------------------Unary operators--------------------------------------");
+Console.WriteLine(b++);
+Console.WriteLine(b--);
+Console.WriteLine(--b);
+Console.WriteLine(++b);
+
+
+Console.WriteLine("--------------------Bitwise Operators------------------------");
+
+int m = 10;
+int n = 2;
+Console.WriteLine(m & n);
+Console.WriteLine(m | n);
+Console.WriteLine(m^n);
+Console.WriteLine(m << n);
+Console.WriteLine(m>>n);
