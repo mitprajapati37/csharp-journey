@@ -1,0 +1,10 @@
+var i = 10;
+Console.WriteLine(i);
+
+i=20;             // implicit types 
+Console.WriteLine(i);
+
+const double PI = 3.14;
+Console.WriteLine(PI);
+
+//PI = Math.PI;   //The left-hand side of an assignment must be a variable, property or indexer
