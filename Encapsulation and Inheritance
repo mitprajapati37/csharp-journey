@@ -1,0 +1,310 @@
+
+////// ---------------------------------------single Inheritance -------------------------------------------------------
+//////class University
+//////{
+//////    public string collageName;
+//////    public string universityName;
+
+//////    public void PrintUniversity()
+//////    {
+//////        Console.WriteLine("Collage Name :-"+collageName);
+//////        Console.WriteLine("UniversityName :-" + universityName);
+
+//////    }
+
+//////}
+//////class Department:University
+//////{
+//////    public string DepartmentNAme;
+//////    public int DId;
+
+//////    public void PrintDepartent()
+//////    {
+//////        Console.WriteLine("DepartmentName:-"+DepartmentNAme);
+//////        Console.WriteLine("DepartmentId"+DId);
+//////    }
+
+
+//////}
+
+//////class Program
+//////{
+//////    public static void Main(string[] args)
+//////    {
+//////        Department dm = new Department();
+//////        dm.collageName = "AMPICS";
+//////        dm.universityName = "GUNI";
+//////        dm.DId = 101;
+//////        dm.DepartmentNAme = "MCA";
+//////        dm.PrintDepartent();
+//////        dm.PrintUniversity();
+
+//////    }
+//////}
+
+////using System.Security.Cryptography.X509Certificates;
+////using System.Threading.Channels;
+
+////class Vehicle
+////{
+////    public string Brands { get; set; }
+
+////    public string Models { get; set; }
+
+////    public int years { get; set; }
+////    public Vehicle(string brand,string model,int year)
+////    {
+////        Brands = brand;
+////        Models = model;
+////        years = year;
+////    }
+
+////    public void PrintVehical()
+////    {
+////        Console.WriteLine(Brands);
+////        Console.WriteLine(Models);
+////        Console.WriteLine(years);
+////    }
+////}
+////class Car:Vehicle
+////{
+////    public int NumberOfDoors { get; set; }
+
+////    public Car(string brand, string model, int year,int numberofdoors):base (brand,model,year)
+////    {
+////        NumberOfDoors = numberofdoors;
+////    }
+////    public void CarDispaly()
+////    {
+////        PrintVehical();
+////        Console.WriteLine("Number Of Doors :-"+NumberOfDoors);
+////    }
+////}
+
+////class Motorcycle:Vehicle
+////{
+////    public int MotercycleId { get; set; }
+
+////    public Motorcycle(string brand, string model, int year, int Motercycleid):base(brand,model,year)
+////    {
+////        MotercycleId = Motercycleid;
+////    }
+////    public void PrintMoterCycle()
+////    {
+////        PrintVehical();
+////        Console.WriteLine(MotercycleId);
+////    }
+////}
+
+////class Truk : Vehicle
+////{
+////    public bool HasSideCar { get; set; }
+
+////    public Truk(string brand, string model, int year, bool hassidecar):base (brand, model, year)
+////    {
+////        HasSideCar = hassidecar;
+////    }
+////    public void TrukDispaly()
+////    {
+////        PrintVehical();
+////        Console.WriteLine(HasSideCar);
+////    }
+////}
+
+
+////class Program
+////{
+////    public static void Main(string[] args)
+////    {
+////        Car car = new Car("TATA", "Siyara", 2026, 4);
+////        car.CarDispaly();
+
+
+////        Truk tk = new Truk("TATA","Siyara",2026,true);
+////        tk.TrukDispaly();
+
+////        Motorcycle mc = new Motorcycle("Hero", "Splender", 2026, 180);
+////        Console.WriteLine();
+////        Console.WriteLine();
+
+////        mc.PrintMoterCycle();
+////    }
+
+////}
+
+
+
+//class Vehicle
+//{
+//    public string Brand { get; set; }
+
+//    public string Model { get; set; }
+
+//    public int Year { get; set; }
+
+//    public Vehicle(string brand, string model,int year)
+//    {
+//        this.Brand = brand;
+//        this.Model = model;
+//        this.Year = year;
+//    }
+
+//    public void PrintVehicle()
+//    {
+//        Console.WriteLine(Brand);
+//        Console.WriteLine(Model);
+//        Console.WriteLine(Year);
+//    }
+//}
+
+//class Car: Vehicle
+//{
+//    public string CarColour { get; set; }
+//    public Car(string brand, string model, int year,string carcolour):base(brand,model,year)
+//    {
+//        this.CarColour = carcolour;
+//    }
+//    public void PrintCar()
+//    {
+//        PrintVehicle();
+//        Console.WriteLine(CarColour);
+//    }
+//}
+
+//class Motorcycle : Vehicle
+//{
+//    public string OwnerName { get; set; }
+//    public Motorcycle(string brand, string model, int year, string ownername):base(brand,model,year)
+//    {
+//        this.OwnerName = ownername;
+//    }
+
+//    public void PrintMoter()
+//    {
+//        PrintVehicle();
+//        Console.WriteLine(OwnerName);
+//    }
+//}
+
+//class Truk : Vehicle
+//{
+//    public bool IsDriver { get; set; }
+//    public Truk(string brand,string model,int year ,bool isdriver):base(brand,model,year)
+//    {
+//        this.IsDriver = isdriver;
+//    }
+//    public void PrintTruk()
+//    {
+//        PrintVehicle();
+//        Console.WriteLine(IsDriver);
+//    }
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        Car car = new Car("TATA", "Siyara", 2026, "Black");
+//        car.PrintCar();
+
+//        Console.WriteLine("-----------------------------------------------------------");
+
+//        Motorcycle mc = new Motorcycle("Hero","Splender",2018,"Mit Prajapati");
+//        mc.PrintMoter();
+
+//        Console.WriteLine("----------------------------------------------------------------");
+
+//        Truk truk = new Truk("TATA", "Ashok Lelan", 2026, true);
+//        truk.PrintTruk();
+//    }
+//}
+
+
+//using System.Security.Principal;
+
+//class BankAccount
+//{
+//    public decimal Balance { get; private set; }
+    
+//    public void Deposit(decimal amount)
+//    {
+//        if(amount <= 0)
+//        {
+//            Console.WriteLine("Please Enter amount greter then 0. ");
+//            return;
+//        }
+//        Balance += amount;
+//    }
+//    public void Withdrow(decimal amount)
+//    {
+//        if(amount<=0)
+//        {
+//            Console.WriteLine("Please Enter amount greter then 0.");
+//            return;
+//        }
+//        if(amount>Balance)
+//        {
+//            Console.WriteLine("Insufficient balance");
+//            return;
+//        }
+//        Balance -= amount;
+
+//    }
+//}
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        BankAccount ac = new BankAccount();
+//        Console.WriteLine("Before"+ac.Balance);
+
+//        ac.Deposit(500);
+//        Console.WriteLine("After deposite"+ac.Balance);
+
+//        ac.Withdrow(1000);
+//        Console.WriteLine("After Widhrow"+ac.Balance);
+//    }
+//}
+
+//class BankAccount
+//{
+//    public decimal Balance { get; private set; }
+
+//    public void Diposit(int amount)
+//    {
+//        if(amount<=0)
+//        {
+//            Console.WriteLine("please enter amount greter then 0");
+//            return;
+//        }
+
+//        Balance += amount;
+//    }
+//    public void Withdrow(int amount)
+//    {
+//        if(amount<=0)
+//        {
+//            Console.WriteLine("can not wthrow amount");
+//            return;
+//        }
+//        if(amount < Balance)
+//        {
+//            Console.WriteLine("Instantwithrow");
+//        }
+//        Balance -= amount;
+//    }
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        BankAccount ba = new BankAccount();
+//        Console.WriteLine(ba.Balance);
+
+//        ba.Diposit(5000);
+//        Console.WriteLine(ba.Balance);
+//        ba.Withdrow(4999);
+//        Console.WriteLine(ba.Balance);
+//    }
+//}
