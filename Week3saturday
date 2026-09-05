@@ -1,0 +1,416 @@
+
+
+//class Program
+//{
+//    public static List<int> Ids = new List<int>();
+//    public static List<string> Names = new List<string>();
+//    public static List<Dictionary<string, int>> marks = new List<Dictionary<string, int>>();
+//    public static void Main(string[] args)
+//    {
+//        while (true)
+//        {
+//            Console.WriteLine("1.Add");
+//            Console.WriteLine("2.ViewAll");
+//            Console.WriteLine("3.Delete");
+//            Console.WriteLine("4.Update");
+//            Console.WriteLine("5.Exit");
+//            Console.Write("Enter the choice : ");
+//            int.TryParse(Console.ReadLine(), out int ch);
+//            switch (ch)
+//            {
+//                case 1:
+//                    Add();
+//                    break;
+//                case 2:
+//                    ViewAll();
+//                    break;
+//                case 3:
+//                    Delete();
+//                    break;
+//                case 4:
+//                    Edit();
+//                    break;
+//                case 5:
+//                    Console.WriteLine("Exit ");
+//                    return;
+//                default:
+//                    Console.WriteLine("Invalid choice..");
+//                    break;
+//            }
+//        }
+//    }
+//    public static void Add()
+//    {
+//        Console.Write("Enter The Id:");
+//        int.TryParse(Console.ReadLine(), out int id);
+//        if (Ids.Contains(id))
+//        {
+//            Console.WriteLine("Id Already Exist..");
+//        }
+//        if (id == null)
+//        {
+//            Console.WriteLine("Is null Please Enter Id");
+//        }
+//        Ids.Add(id);
+
+//        Console.Write("Enter the Name : ");
+//        string name = Console.ReadLine();
+//        if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
+//        {
+//            Console.WriteLine("Please Enteted name is null");
+//        }
+//        Names.Add(name);
+
+//        Dictionary<string, int> mark = new Dictionary<string, int>();
+//        Console.Write("How many subject Are their ? ");
+//        int.TryParse(Console.ReadLine(), out int sc);
+//        for (int i = 0; i < sc; i++)
+//        {
+//            Console.Write("Enter the subject name :-");
+//            string sname = Console.ReadLine();
+//            if (string.IsNullOrEmpty(sname))
+//            {
+//                Console.WriteLine("Is null or empty");
+//                sname = Console.ReadLine();
+//            }
+//            if (mark.ContainsKey(sname))
+//            {
+//                Console.WriteLine("Already Exits..");
+//                sname = Console.ReadLine();
+//            }
+//            Console.Write("Enter the Marks of subject");
+//            int.TryParse(Console.ReadLine(), out int sm);
+//            if (sm <= 0)
+//            {
+//                Console.WriteLine("Please Enter Pogitive Marks");
+//            }
+//            mark.Add(sname, sm);
+//        }
+//        marks.Add(mark);
+//        Console.WriteLine("Add Data sucessfully");
+//    }
+
+//    public static void ViewAll()
+//    {
+//        int index = 0;
+//        foreach (var i in Ids)
+//        {
+//            Console.WriteLine($"{Ids[index]} - {Names[index]}");
+//            foreach (var dec in marks[index])
+//            {
+//                Console.WriteLine($"{dec.Key}-{dec.Value}");
+//            }
+//            index++;
+//        }
+//    }
+//    public static void Delete()
+//    {
+//        Console.Write("Enter the Id");
+//        int.TryParse(Console.ReadLine(), out int Did);
+//        if (!Ids.Contains(Did))
+//        {
+//            Console.WriteLine("Entered Id Not Found");
+//            return;
+//        }
+//        int index = Ids.IndexOf(Did);
+//        Ids.RemoveAt(index);
+//        Names.RemoveAt(index);
+//        marks.RemoveAt(index);
+//        Console.WriteLine("Delete Sucessfully");
+//        if (Did != Did)
+//        {
+//            Console.WriteLine("Data not found");
+//        }
+
+//    }
+
+//    public static void Edit()
+//    {
+//        Console.Write("Enter the Id :");
+//        int.TryParse(Console.ReadLine(), out int id);
+//        if (!Ids.Contains(id))
+//        {
+//            Console.WriteLine("ID not Found");
+//            return;
+//        }
+//        int index = Ids.IndexOf(id);
+//        Console.Write("Enter the Old Subject Name :");
+//        string name = Console.ReadLine();
+//        if (!marks[index].ContainsKey(name))
+//        {
+//            Console.WriteLine("Subject not Found");
+//            return;
+//        }
+//        Console.Write("Enter the new Marks");
+//        int.TryParse(Console.ReadLine(), out int Newmarks);
+//        marks[index][name] = Newmarks;
+
+//        Console.WriteLine("Marks Edit Sucessfully");
+//    }
+//}
+
+
+//abstract class Animal                          //Abstarct class 
+//{
+//    public abstract void Dog();               // Abstract Method
+
+//}
+
+//interface ICat                               // interface 
+//{
+//    void Catspeak(string why);
+//}
+
+//class Doges : Animal                      // inheritance using :
+//{
+//    public override void Dog()
+//    {
+//        Console.WriteLine("Dog is Bark");
+//    }
+
+//}
+//class Cats : ICat
+//{
+//    public void Catspeak(string Why)
+//    {
+
+//        Console.WriteLine($"Cat spick {Why}");
+//    }
+//    public virtual void peaks()                         // Create a Virual method  runtime Polymorphism
+//    {
+//        Console.WriteLine("peak is good");
+//    }
+//    public new void Hello()                      // method Hiding Concept
+//    {
+//        Console.WriteLine("Hii meet");
+//    }
+//}
+
+//class Add : Cats
+//{
+//    public override void peaks()                      // override method of runtime Polymorphism
+//    {
+//        base.peaks();
+//        Console.WriteLine("peak is Also Good ");
+//    }
+//    public void Hello()               // 
+//    {
+//        Console.WriteLine("Hii chitt");
+//    }
+//    public int Adding(int a, int b)              // Mehtod overLoading
+//    {
+//        return a + b;
+
+//    }
+//    public int Adding(int a, int b, int c)
+//    {
+//        return a + b + c;
+//    }
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        Add a = new Add();
+//        Doges d = new Doges();
+
+//        Console.WriteLine(a.Adding(10, 20));
+
+//        Console.WriteLine(a.Adding(10, 20, 30));
+//        a.Hello();
+
+//        a.peaks();
+//        a.Catspeak("meaw");
+//        d.Dog();
+
+//    }
+//}
+
+//class Car
+//{
+//    public string name;
+//    public Car()
+//    {
+//        Console.WriteLine("Default Constructor");
+//    }
+//    public Car(string name)
+//    {
+//        Console.WriteLine(name);
+//    }
+//    public Car(Car c)
+//    {
+//        this.name = c.name;
+//    }
+
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        Car c = new Car();
+//        Car cp = new Car("Parameterized Constructor.");
+//        Car c1 = new Car("BMW");
+
+//        Car c2 = new Car(c1);
+
+//        Console.WriteLine(c2.name);
+
+//    }
+//}
+
+
+//Distructor
+
+//class Doctor
+//{
+//    public Doctor()
+//    {
+//        Console.WriteLine("Doctor Constructor Created..");
+//    }
+
+//    ~Doctor()
+//    {
+//        Console.WriteLine("Doctor Object Destroy");
+//    }
+//}
+
+//class Program
+//{
+//    static void CreateDoctor()
+//    {
+//        Doctor dr = new Doctor();
+//    }
+
+//    public static void Main(string[] args)
+//    {
+//        CreateDoctor();
+
+//        GC.Collect();
+//        GC.WaitForPendingFinalizers();
+
+//        Console.WriteLine("Program End");
+//    }
+//}
+
+//List<int> Id = new List<int>()
+//{
+//    10,20,30,40,50,60
+//};
+
+//foreach (int i in Id)
+//{
+//    Console.Write(i + " ");
+//}
+//Console.WriteLine();
+//int max = Id.Max();
+//Console.WriteLine(max);
+//Console.WriteLine(Id.IndexOf(60));
+//Console.WriteLine(Id.Min());
+//Console.WriteLine(Id.Contains(50));
+//Console.WriteLine(Id.Count);
+//Console.WriteLine(Id.Remove(10));
+
+
+//numeric Formating 
+
+//double price = 123.4567;
+
+//Console.WriteLine(price.ToString("F2"));
+//Console.WriteLine(price.ToString("N3"));
+
+//string name = "Meet Prajapati";
+
+//Console.WriteLine(name.Length);
+//Console.WriteLine(name.ToUpper());
+//Console.WriteLine(name.ToLower());
+//Console.WriteLine(name.Replace("Meet", "Mit"));
+//Console.WriteLine(name.Contains("meet"));
+
+//string m = " ";
+//Console.WriteLine(string.IsNullOrEmpty(m));
+//Console.WriteLine(string.IsNullOrWhiteSpace(m));
+
+
+//Prime Or Not
+
+//int n = 17;
+//bool isPrime = true;
+
+//if (n <= 1)
+//{
+//    isPrime = false;
+//}
+//else
+//{
+//    for (int i = 2; i < n; i++)
+//    {
+//        if (n % i == 0)
+//        {
+//            isPrime = false;
+//            break;
+//        }
+//    }
+//}
+
+//if (isPrime)
+//{
+//    Console.WriteLine("Prime");
+//}
+//else
+//{
+//    Console.WriteLine("Not Prime");
+//}
+
+
+//Named Parameter
+
+//class Program
+//{
+//    static void Student(string name, int age)
+//    {
+//        Console.WriteLine(name);
+//        Console.WriteLine(age);
+//    }
+
+//    static void Main()
+//    {
+//        Student(name: "Meet", age: 37);
+//    }
+//}
+
+
+
+//using System.Threading.Channels;
+
+//interface Iservice
+//{
+//    void Ipayable();
+//}
+//interface IBank
+//{
+//    void Bank();
+//}
+
+//class User : Iservice, IBank
+//{
+//    public void Ipayable()
+//    {
+//        Console.WriteLine("This is Payable service");
+//    }
+//    public void Bank()
+//    {
+//        Console.WriteLine("This is a Bank Service");
+//    }
+//}
+
+//class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        User user = new User();
+//        user.Bank();
+//        user.Ipayable();
+//    }
+//}
